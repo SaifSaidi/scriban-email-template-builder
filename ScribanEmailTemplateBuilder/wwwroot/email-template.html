@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ subject }}</title>
+    <style>
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: #6c757d;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header bg-warning">
+            <h1 class="display-6">{{ subject }}</h1>
+        </div>
+        <div class="content">
+            <p class="lead">Dear {{ recipient_name }},</p>
+            <div class="my-4">
+                {{ message }}
+            </div>
+
+            <div class="my-4 text-center">
+                <a href="{{ cta_link }}" class="btn btn-warning btn-lg">{{ cta_text }}</a>
+            </div>
+            <hr>
+            <p>If you have any questions, please don't hesitate to contact our support team.</p>
+            <p>Date: {{ date}}</p>
+            <p class="mb-0">Best regards,</p>
+            <p>Sender: {{ sender_name }}<br>Company: {{ company_name }}</p>
+        </div>
+        <div class="footer">
+            <p>&copy; {{ year }} {{ company_name }}. All rights reserved.</p>
+            <p>
+                <a href="{{ unsubscribe_link }}" class="text-muted">Unsubscribe</a> |
+                <a href="{{ privacy_policy_link }}" class="text-muted">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
