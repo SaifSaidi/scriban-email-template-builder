@@ -1,7 +1,6 @@
-# Scriban + Blazor: Email Template Builder 🔥🔥
+# Scriban + Blazor
 
 Email template builder built with Blazor and Scriban.
-This application provides an intuitive interface for creating, editing, and previewing email templates, complete with multi-recipient support and dynamic content insertion 
 
 # Demo:
 
